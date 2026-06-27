@@ -1,32 +1,19 @@
-interface Person  {
+type Person = {
     name: string
-    age: number 
+    age: number
     isStudent: boolean
-    address:{
-        street:string
-        city:string
-        country:string
-    }
 }
 
 let person1: Person = {
     name: "Joe",
     age: 42,
-    isStudent: true,
-    address:{
-        street:"Middhi",
-        city:"Ballia",
-        country:"India"
-    }
+    isStudent: true
 }
 
-let person2: Person  = {
+let person2: Person = {
     name: "Jill",
     age: 66,
-    isStudent: false,
-    address:{
-        street:"123 Main",
-        city: "Anyton",
-        country:"USA"
-    }
+    isStudent: false
 }
+
+let people: Person[] = [person1, person2]
