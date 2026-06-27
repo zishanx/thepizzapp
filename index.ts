@@ -1,3 +1,5 @@
+
+
 const menu = [
     { name: "Margherita", price: 8 },
     { name: "Pepperoni", price: 10 },
@@ -6,10 +8,10 @@ const menu = [
 ]
 
 let cashInRegister = 100
-
+let nextOrderid = 1
 const orderQueue = []
 
-let nextOrderid = 1
+
 
 function addNewPizza(pizzaObj) {
     menu.push(pizzaObj)
@@ -17,7 +19,11 @@ function addNewPizza(pizzaObj) {
 
 function placeOrder(pizzaname) {
     const pizza = menu.find((item) => item.name === pizzaname);
-    cashInRegister += pizza.price;
+    if(!pizza){
+        console.log("The pizza doesn't exist in your menu.")
+        return
+    }
+    cashInRegister +=  pizza.price;
     let newOrder = { pizza: pizza, status: "ordered", id: nextOrderid++ };
 
     orderQueue.push(newOrder)
