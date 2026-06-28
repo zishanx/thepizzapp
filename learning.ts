@@ -17,3 +17,5 @@ let person2: Person = {
 }
 
 let people: Person[] = [person1, person2]
+
+//The stuff that i already know about includes type and interface union and intersector using & and also about eh a lil bit about the genirc type .
