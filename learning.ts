@@ -1,1 +1,8 @@
-/* Enums means something that can be either this or that just two values like a boolean can be both or just one dependes on the code. not a bookish defination but something that will work .  */
+type User = {
+    username: string
+    roel: "guest" | "member" | "admin"
+}
+
+type UserRole = "guest" | "member" | "admin"
+
+let userRole: UserRole = "guest"
