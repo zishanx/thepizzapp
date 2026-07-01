@@ -54,9 +54,8 @@ function completeOrder(id: number) {
 
 function getPizzaDeatil(identifier: string | number): Dish | string {
     let pizza
-    if (typeof (identifier) === "string") {
-        pizza = menu.find(item => item.name === identifier)
-
+    if (typeof identifier === "string") {
+        pizza = menu.find(item => item.name.toLowerCase === identifier.toLowerCase)
     } else {
         pizza = menu.find(item => item.id === identifier)
     }
